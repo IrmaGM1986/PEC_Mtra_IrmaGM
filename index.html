@@ -1,123 +1,147 @@
-<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
-<html lang="es"> <!-- Documento en español -->
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8"> <!-- Codificación de caracteres (acentos, ñ, etc.) -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta el diseño a móviles -->
-  <title>MI EXPERIENCIA ESCOLAR PUEDE MEJORAR LA TUYA</title> <!-- Título que aparece en la pestaña -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MI EXPERIENCIA ESCOLAR PUEDE MEJORAR LA TUYA</title>
+
   <style>
     body {
-      margin: 0; /* Elimina márgenes por defecto */
-      font-family: Arial, sans-serif; /* Fuente del texto */
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
     }
 
-    /* ---- ESTILO DEL MENÚ PRINCIPAL ---- */
+    /* MENÚ */
     nav {
-      background: #333; /* Fondo gris oscuro */
+      background: #333;
     }
     nav ul {
-      list-style: none; /* Quita viñetas de la lista */
-      margin: 0;        /* Elimina márgenes */
-      padding: 0;       /* Elimina relleno */
-      display: flex;    /* Coloca los <li> en línea (horizontal) */
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
     }
     nav ul li {
-      position: relative; /* Necesario para posicionar el submenú debajo */
+      position: relative;
     }
     nav ul li a {
-      display: block;           /* Hace que todo el área sea clickeable */
-      padding: 15px 20px;       /* Espaciado interno */
-      color: white;             /* Texto blanco */
-      text-decoration: none;    /* Quita el subrayado */
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
     }
     nav ul li a:hover {
-      background: #444; /* Cambia el fondo al pasar el ratón */
+      background: #444;
     }
 
-    /* ---- ESTILO DEL SUBMENÚ ---- */
+    /* SUBMENÚ */
     nav ul li ul {
-      display: none;       /* Oculta el submenú por defecto */
-      position: absolute;  /* Posiciona el submenú relativo al padre */
-      top: 100%;           /* Lo coloca justo debajo del elemento padre */
-      left: 0;             /* Alineado a la izquierda */
-      background: #444;    /* Fondo del submenú */
-      padding: 0;          /* Sin espacio interno */
-      min-width: 180px;    /* Ancho mínimo del submenú */
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #444;
+      min-width: 180px;
     }
-    nav ul li ul li a {
-      padding: 10px 15px;  /* Espaciado interno en las opciones */
-    }
-    nav ul li ul li a:hover {
-      background: #555;    /* Color más claro al pasar el ratón */
+    nav ul li:hover > ul {
+      display: block;
     }
 
-    /* ---- MOSTRAR EL SUBMENÚ ---- */
-    nav ul li:hover > ul {
-      display: block; /* Cuando paso el ratón sobre el <li>, muestra el submenú */
+    /* CONTENIDO */
+    .container {
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .media {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .media img,
+    .media iframe {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
     }
   </style>
 </head>
+
 <body>
-  <!-- Menú principal -->
+
+  <!-- MENÚ -->
   <nav>
     <ul>
-      <!-- Elemento simple sin submenú -->
-      <li><a href="#">ABANDONO ESCOLAR?</a></li>
+      <li><a href="index.html">Inicio</a></li>
 
-      <!-- Elemento con submenú -->
       <li>
-        <a href="#">CONSECUENCIAS  ▾</a> <!-- Flecha indicando submenú -->
+        <a href="consecuencias.html">Consecuencias ▾</a>
         <ul>
-          <li><a href="#">......</a></li>
-          <li><a href="#">......</a></li>
-          <li><a href="#">......</a></li>
+          <li><a href="#">Económicas</a></li>
+          <li><a href="#">Sociales</a></li>
         </ul>
       </li>
 
-      <!-- Otro elemento con submenú -->
-      <li>
-        <a href="#">TESTIMONIOS ▾</a>
-        <ul>
-          <li><a href="#">......</a></li>
-          <li><a href="#">......</a></li>
-          <li><a href="#">......</a></li>
-        </ul>
-      </li>
-      
-      <!-- Otro elemento con submenú -->
-      <li>
-        <a href="#">PREVENCION ▾</a>
-        <ul>
-          <li><a href="#">......</a></li>
-          <li><a href="#">......</a></li>
-          <li><a href="#">......</a></li>
-        </ul>
-      </li>
-       <!-- Otro elemento con submenú -->
-      <li>
-        <a href="#">FAMILIA-ESCUELA ▾</a>
-        <ul>
-          <li><a href="#">......</a></li>
-          <li><a href="#">......</a></li>
-          <li><a href="#">......</a></li>
-        </ul>
-      </li>
-         <!-- Otro elemento con submenú -->
-      <li>
-        <a href="#">RECURSOS Y APOYOS ▾</a>
-        <ul>
-          <li><a href="#">......</a></li>
-          <li><a href="#">......</a></li>
-          <li><a href="#">......</a></li>
-        </ul>
-      </li>
-
-      <!-- Elemento simple -->
-      <li><a href="#">Contacto</a></li>
+      <li><a href="testimonios.html">Testimonios</a></li>
+      <li><a href="prevencion.html">Prevención</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="container">
+    <h1>Abandono Escolar</h1>
+
+    <p>
+      El abandono escolar es una problemática social que afecta a miles de estudiantes.
+      Ocurre cuando los alumnos dejan de asistir a la escuela antes de concluir sus estudios,
+      lo cual puede deberse a factores económicos, familiares, sociales o personales.
+    </p>
+
+    <p>
+      Esta situación impacta directamente en el desarrollo de los jóvenes,
+      limitando sus oportunidades laborales y su crecimiento personal.
+      Por ello, es importante generar conciencia y promover acciones que ayuden
+      a prevenir este fenómeno.
+    </p>
+
+    <!-- IMAGEN Y VIDEO -->
+    <div class="media">
+
+      <!-- IMAGEN -->
+      <img src="https://via.placeholder.com/500x300" alt="Imagen sobre abandono escolar">
+
+      <!-- VIDEO (puedes cambiar el link de YouTube) -->
+      <iframe 
+        height="300"
+        src="https://www.youtube.com/embed/1fueZCTYkpA"
+        title="Video sobre abandono escolar"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>Proyecto educativo | Concientización sobre el abandono escolar</p>
+  </footer>
+
 </body>
 </html>
-
-
-
-
