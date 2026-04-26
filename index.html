@@ -58,6 +58,18 @@
       padding: 100px 20px;
     }
 
+    /* TEXTO ANIMADO */
+    .titulo {
+      font-size: 2.5em;
+      font-weight: bold;
+      animation: aparecer 1.5s ease-out;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     /* CONTENIDO */
     .container {
       padding: 30px;
@@ -71,6 +83,12 @@
       padding-left: 10px;
     }
 
+    p {
+      line-height: 1.6;
+      color: #444;
+    }
+
+    /* TARJETAS */
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -84,8 +102,14 @@
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       border-top: 5px solid #d63384;
+      transition: 0.3s;
     }
 
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* MEDIA */
     .media {
       display: flex;
       flex-wrap: wrap;
@@ -95,9 +119,22 @@
     }
 
     .media img, .media iframe {
-      max-width: 450px;
       width: 100%;
+      max-width: 450px;
+      height: auto;
       border-radius: 15px;
+    }
+
+    /* FRASE */
+    .frase {
+      background: linear-gradient(90deg, #d63384, #6a0dad);
+      color: white;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      margin: 25px 0;
+      font-size: 1.2em;
+      font-weight: bold;
     }
 
     footer {
@@ -111,7 +148,7 @@
 
 <body>
 
-<!-- MENÚ COMPLETO -->
+<!-- MENÚ -->
 <nav>
   <ul>
     <li><a href="index.html">ABANDONO ESCOLAR</a></li>
@@ -163,39 +200,52 @@
 
 <!-- PORTADA -->
 <div class="hero">
-  <h1>El abandono escolar se puede prevenir</h1>
+  <h1 class="titulo">El abandono escolar se puede prevenir</h1>
   <p>Infórmate, reflexiona y actúa</p>
 </div>
 
 <!-- CONTENIDO -->
 <div class="container">
 
+<h2>¿Qué es el abandono escolar?</h2>
+<p>
+El abandono escolar ocurre cuando un estudiante deja sus estudios antes de terminarlos.
+Este problema afecta su futuro, limita sus oportunidades y también impacta a la sociedad.
+Comprenderlo es clave para prevenirlo.
+</p>
+
+<div class="frase">
+"La educación es la mejor herramienta para construir un mejor futuro"
+</div>
+
 <h2>¿Por qué ocurre el abandono escolar?</h2>
 
 <div class="cards">
-  <div class="card"><h3>💰 Problemas económicos</h3><p>Falta de recursos obliga a trabajar.</p></div>
-  <div class="card"><h3>😔 Falta de motivación</h3><p>No encuentran sentido a estudiar.</p></div>
-  <div class="card"><h3>👨‍👩‍👧 Familia</h3><p>Falta de apoyo o conflictos.</p></div>
-  <div class="card"><h3>📉 Bajo rendimiento</h3><p>Dificultades académicas.</p></div>
+  <div class="card"><h3>💰 Problemas económicos</h3><p>Muchos estudiantes deben trabajar para apoyar a su familia.</p></div>
+  <div class="card"><h3>😔 Falta de motivación</h3><p>No encuentran interés o sentido en continuar estudiando.</p></div>
+  <div class="card"><h3>👨‍👩‍👧 Situaciones familiares</h3><p>Conflictos o falta de apoyo influyen directamente.</p></div>
+  <div class="card"><h3>📉 Bajo rendimiento académico</h3><p>Las dificultades escolares generan frustración.</p></div>
 </div>
 
-<h2>Consecuencias</h2>
+<h2>Consecuencias de no terminar los estudios</h2>
 
 <div class="cards">
-  <div class="card"><h3>💼 Menos empleo</h3></div>
-  <div class="card"><h3>💸 Inestabilidad</h3></div>
-  <div class="card"><h3>🚧 Limitaciones</h3></div>
+  <div class="card"><h3>💼 Menores oportunidades laborales</h3><p>Acceso limitado a empleos bien pagados.</p></div>
+  <div class="card"><h3>💸 Inestabilidad económica</h3><p>Ingresos bajos y pocas oportunidades.</p></div>
+  <div class="card"><h3>🚧 Limitaciones personales</h3><p>Menor desarrollo profesional y personal.</p></div>
 </div>
 
+<h2>Reflexiona</h2>
+
 <div class="media">
-<img src="imagen.jpg" width="300" height="200">
-  <iframe height="250" width="300" src="https://www.youtube.com/embed/1fueZCTYkpA"></iframe>
+  <img src="imagen.jpg">
+  <iframe src="https://www.youtube.com/embed/1fueZCTYkpA"></iframe>
 </div>
 
 </div>
 
 <footer>
-  <p>CECyTEM Plantel Valle de Bravo -Campaña educativa 2026</p>
+  <p>CECyTEM Plantel Valle de Bravo - Campaña educativa 2026</p>
 </footer>
 
 </body>
